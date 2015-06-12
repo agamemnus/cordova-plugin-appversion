@@ -1,7 +1,7 @@
 appversion
 ==================
 
-Access the app version of your code.
+Get the app version of your code.
 
 Usage / Function List
 ----------------------
