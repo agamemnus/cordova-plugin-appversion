@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="com.flyingsoftgames.appversion" version="0.1.0">
+ <name>App Version</name>
+ <description>Access the app version of your code.</description>
+ <author>Michael Romanovsky</author>
+ <license>MIT (see readme.md)</license>
+ <keywords>cordova,phonegap,android,agamemnus,flyingsoftgames,app version,get app version,version,version code</keywords>
+ <engines><engine name="cordova" version=">=3.0.0" /></engines>
+ 
+ <js-module src="www/appversion.js" name="AppVersion"><clobbers target="window.plugins.AppVersion" /></js-module>
+ <platform name="android">
+  <config-file target="res/xml/config.xml" parent="/*">
+   <feature name="AppVersion">
+    <param name="android-package" value="com.flyingsoftgames.appversion.AppVersion"/>
+   </feature>
+  </config-file>
+  <dependency id="android.support.v4" />
+  <source-file src="src/android/AppVersion.java" target-dir="src/com/flyingsoftgames/appversion" />
+ </platform>
+</plugin>
